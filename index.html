@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>For Mireina — A Love Story</title>
+<meta name="description" content="A little storybook of everything I feel for you." />
+<meta name="theme-color" content="#120714" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scene" aria-hidden="true">
+    <div class="mood" id="mood"></div>
+    <div class="aurora aurora--1"></div>
+    <div class="aurora aurora--2"></div>
+    <div class="aurora aurora--3"></div>
+    <canvas id="ambient"></canvas>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">M</span>
+      <span class="brand-text">for Mireina</span>
+    </div>
+  </header>
+
+  <main class="stage">
+    <button class="nav nav--prev" id="prev" type="button" aria-label="Previous page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+
+    <div class="book-wrap">
+      <div class="book" id="book">
+        <div class="ribbon" aria-hidden="true"></div>
+        <div class="pages" id="pages"></div>
+      </div>
+    </div>
+
+    <button class="nav nav--next" id="next" type="button" aria-label="Next page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </main>
+
+  <footer class="footer">
+    <div class="progress" aria-hidden="true"><div class="progress-bar" id="bar"></div></div>
+    <div class="meta">
+      <span class="counter" id="counter">01 / 18</span>
+      <span class="hint" id="hint">swipe · click · arrow keys</span>
+    </div>
+  </footer>
+
+  <p class="sr-only" id="live" aria-live="polite"></p>
+
+  <noscript>
+    <div class="noscript">This little book needs JavaScript to turn its pages.</div>
+  </noscript>
+
+  <script src="app.js"></script>
+</body>
+</html>
